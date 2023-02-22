@@ -37,7 +37,7 @@ class CategoryController extends Controller
             $find = Category::find($id);
             if ($find) {
                 $data['category'] = $find;
-                return response()->json(['success' => true, 'message' => 'Edit Category', 'data' => view('admin.Category.edit', $data)->render()]);
+                return response()->json(['success' => true, 'message' => 'Edit Category', 'data' => view('admin.category.edit', $data)->render()]);
             }
             return response()->json(['success' => false, 'message' => 'Category Not Found'], 404);
         }
